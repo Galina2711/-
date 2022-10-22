@@ -13,24 +13,24 @@ if x2 < x < x1 and y1 < y < y2:
 elif x2 < x < x1 and y == y1:
     print("Точка на границе")
     x = x
-    y = y2 - y1
+    y = round(y2 - y1)
     print(x)
     print(y)
 elif x2 < x < x1 and y == y2:
     print("Точка на границе")
     x = x
-    y = y2 - y1
+    y = round(y2 - y1)
     print(x)
     print(y)
 elif x == x1 and y1 < y < y2:
     print("Точка на границе")
-    x = x1 - x2
+    x = x1 + x2
     y = y
     print(x)
     print(y)
 elif x == x2 and y1 < y < y2:
     print("Точка на границе")
-    x = x1 - x2
+    x = x1 + x2
     y = y
     print(x)
     print(y)
@@ -40,12 +40,20 @@ else:
     print(len(a))
     b = str(input("Введите строку: "))
     print(len(b))
-    if len(a) > (x1-x2)*(y2-y1):
-        print("a > S")
-    elif len(a) < (x1-x2)*(y2-y1):
-        print("a < S")
-    elif len(b) > (x1 - x2) * (y2 - y1):
-        print("b > S")
-    elif len(b) < (x1 - x2) * (y2 - y1):
-        print("b < S")
-        
+    if len(a) > len(b):
+        if len(a) > round((x1-x2)*(y2-y1)):
+            print("a > S")
+        else:
+            print("a < S")
+    elif len(b) > len(a):
+        if len(b) > round((x1 - x2) * (y2 - y1)):
+            print("b > S")
+        else:
+            print("b < S")
+    else:
+        print("a = b")
+        if len(a) > round((x1-x2)*(y2-y1)):
+            print("a > S и b > S")
+        else:
+            print("a < S и b < S")
+             
