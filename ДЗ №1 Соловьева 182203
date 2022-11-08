@@ -1,0 +1,111 @@
+# Задание 1
+N = float(input("N = "))
+K = float(input("K = "))
+Student = K // N
+Shaurma = K % N
+print(Student)
+print(Shaurma)
+
+# Задание 2
+a = int(input("Введите трёхзначное число: "))
+b = a % 10
+a = a // 10
+b1 = a % 10
+a = a // 10
+if a != b != b1:
+    print(a, b, b1)
+    print(a, b1, b)
+    print(b, a, b1)
+    print(b, b1, a)
+    print(b1, a, b)
+    print(b1, b, a)
+else:
+    print ("Цифры равны")
+    
+# Задание 3
+cook = int(input("Введите количество времени: "))
+clean = int(input("Введите количество времени: "))
+wash = int(input("Введите количество времени: "))
+hours = 10
+minutes = 0
+while cook >= 60:
+    cook -= 60
+    hours += 1
+minutes += cook
+while clean >= 60:
+    clean -= 60
+    hours += 1
+minutes += clean
+while wash >= 60:
+    wash -= 60
+    hours += 1
+minutes += wash
+while minutes >= 60:
+    minutes -= 60
+    hours += 1
+if minutes == 0:
+    a = str(hours) + ':' + str(minutes) + '0'
+else:
+    a = str(hours) + ':' + str(minutes)
+print(a)
+
+# Задание 4
+a = str(input("Введите пароль: "))
+b = str(input("Введите повторно пароль: "))
+if a != b:
+    print("Пароль не принят! Пароли не совпадают!")
+else:
+    print("Пароль принят!")
+    
+ # Задание 5
+ a = float(input("Введите число: "))
+b = float(input("Введите число: "))
+c = str("наибольшее число")
+d = str("наименьшее число")
+if a > b:
+    print(a, c)
+    print(b, d)
+elif a < b:
+    print(a, d)
+    print(b, c)
+else:
+      print("Числа равны")
+    
+ # Задание 6
+ a = int(input("Введите возраст: "))
+ if a < 18:
+      print("Доступ запрещён")
+ else:
+      print("Доступ разрешён")
+ 
+ # Задание 7
+ a = input("")
+def max(a):
+    b = 0
+    for i in a:
+        if int(i) > b:
+            b = int(i)
+    return b
+print(max(a))
+
+# Задание 8
+a = int(input("Введите число: "))
+b = int(input("Введите число: "))
+c = int(input("Введите число: "))
+d = int(input("Введите число: "))
+k = 0
+sum = 0
+if a % 2 != 0:
+    k += 1
+    sum += a
+if b % 2 != 0:
+    k += 1
+    sum += b
+if c % 2 != 0:
+    k += 1
+    sum += c
+if d % 2 != 0:
+    k += 1
+    sum += d
+print("Количество нечетных:" + str(k))
+print("Сумма нечетных:" + str(sum))
