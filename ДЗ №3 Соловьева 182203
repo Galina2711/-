@@ -1,0 +1,33 @@
+# Задание 1
+a = int(input())
+for i in range(1, 11):
+    print(str(a) + " x " + str(i)  + " = " + str(a * i))
+
+# Задание 2
+a = int(input("Введите количество: "))
+b = 0
+for i in range(a):
+    x = int(input())
+    b += x
+print(b)
+
+# Задание 3
+a = input()
+if a != "PRINT":
+    print("id" + a)
+    while a != "PRINT":
+        a = input()
+        if a != "PRINT":
+            print("id" + a)
+            
+# Задание 4
+a = int(input("Введите число: "))
+b = int(input("Введите число: "))
+while a != 0 and b != 0:
+    print(a + b)
+    print(a - b)
+    print(a * b)
+    print(a / b)
+    a = int(input())
+    b = int(input())
+print("На ноль делить нельзя!")
