@@ -1,48 +1,47 @@
 # Задание №1
-import random
-n = int(input())
-a = int(input())
-b = int(input())
-my_list = []
-for i in range(n):
-    i = random.randint(a,b)
-    my_list.append(i)
-print(my_list)
-print(len(my_list))
-print(max(my_list))
-print(min(my_list))
-my_list.sort()
-print(my_list)
-my_list.sort(reverse=True)
-print(my_list)
+number_of_string = int(input())
+word = ''
+for a in range(number_of_string):
+    a = input()
+    word += a[0]
+print(word.upper())
 
 # Задание №2
-import random
-n = int(input())
-my_list = []
-for i in range(n):
-    i = random.randint(0,1)
-    my_list.append(i)
-print(my_list)
-sum_0 = 0
-sum_1 = 0
-for i in my_list:
-    if i == 0:
-        sum_0 += 1
-    elif i == 1:
-        sum_1 += 1
-print(sum_0)
-print(sum_1)
+string = input()
+print(len(string))
+print(string[0])
+print(string[-1])
+print(string[::-1])
+print(string[::2])
+print(string[1::2])
+
 
 # Задание №3
-import random
-n = int(input())
-my_list = []
-for i in range(n):
-    i = random.randint(0, 9)
-    my_list.append(i)
-print(my_list)
-s = int(input())
-while s in my_list:
-    my_list.remove(s)
-print(my_list)
+string = input()
+som = 1
+if string.isdigit():
+    for i in string:
+        print(int(i) * 10)
+elif string.isalpha():
+    for i in string:
+        if i == 'q' or i == 'Q':
+            som += 1
+    print(som)
+else:
+    spo = 0
+    for i in string:
+        if i == '!' or i == '?' or i == '#' or i == '/' or i == '*' or i == '&':
+            print(spo)
+        spo += 1
+
+# Задание №4
+while True:
+    string = input()
+    if string.upper() == 'STOP':
+        break
+    elif string.isdigit():
+        print('Цифровая строка')
+    elif string.isalpha():
+        print('Буквенная строка')
+    elif string.isalnum():
+        print('Смешанная строка')
